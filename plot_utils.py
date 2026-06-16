@@ -1,8 +1,6 @@
-#!/usr/bin/env python3
 # Plotting utilities for visualizing MPPCA results
 
 import matplotlib.pyplot as plt
-
 
 def plot_clusters_map(df, k):
     cmap = plt.get_cmap('tab20', k)
@@ -50,11 +48,11 @@ def plot_magnetic_intensity(df):
     plt.show()
 
 
-def plot_laser_altitude_contour(df):
+def plot_altitude_contour(df):
     plt.figure(figsize=(12, 10))
-    cntr = plt.tricontourf(df['longitude'], df['latitude'], df['laser_alt'], levels=20, cmap='terrain')
-    plt.colorbar(cntr, label='Laser Altitude (m)')
-    plt.title('Laser Altitude Contour Map', fontsize=16)
+    cntr = plt.tricontourf(df['longitude'], df['latitude'], df['altitude'], levels=20, cmap='terrain')
+    plt.colorbar(cntr, label='Altitude (m)')
+    plt.title('Altitude Contour Map', fontsize=16)
     plt.xlabel('Longitude')
     plt.ylabel('Latitude')
     plt.axis('equal')

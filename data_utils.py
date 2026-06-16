@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 from typing import Tuple
 
-FEATURES = ['latitude', 'longitude', 'laser_alt', 'magnetics_final_microlevelled']
+FEATURES = ['latitude', 'longitude', 'altitude', 'magnetics']
 
 
 def load_magnetic_csv(path: str) -> pd.DataFrame:

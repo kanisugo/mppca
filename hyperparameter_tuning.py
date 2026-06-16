@@ -9,7 +9,7 @@ if __name__ == "__main__":
     try:
         df = load_magnetic_csv(CSV_PATH)
     except FileNotFoundError:
-        print("Error: magnetic.csv not found.")
+        print("Error: file.csv not found.")
         exit()
 
     data = extract_features(df)

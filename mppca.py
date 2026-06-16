@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # Mixture of Probabilistic PCA (MPPCA) implementation (module-only)
 
 import numpy as np
