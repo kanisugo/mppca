@@ -5,7 +5,7 @@ from mppca import MPPCA
 from data_utils import load_magnetic_csv, extract_features
 
 if __name__ == "__main__":
-    CSV_PATH = "/to/file/path"
+    CSV_PATH = "/Users/kanishksugotra/Downloads/magnetic.csv"
     try:
         df = load_magnetic_csv(CSV_PATH)
     except FileNotFoundError:
