@@ -167,12 +167,12 @@ class MPPCA:
 if __name__ == "__main__":
     try:
         # REPLACE WITH YOUR PATH
-        df = pd.read_csv("/Users/kanishksugotra/Downloads/magnetic.csv")
+        df = pd.read_csv("/to/file/path/")
     except FileNotFoundError:
         print("Error: magnetic.csv not found.")
         exit()
 
-    features = ['latitude', 'longitude', 'laser_alt', 'magnetics_final_microlevelled']
+    features = ['latitude', 'longitude', 'altitude', 'magnetics']
     data = df[features].values
 
     # 1. Scale Full Dataset

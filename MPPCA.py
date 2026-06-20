@@ -239,7 +239,7 @@ def plot_results(df, model, k):
 
     # Plot 4: Magnetic Intensity
     plt.figure(figsize=(12, 10))
-    sc = plt.scatter(df['longitude'], df['latitude'], c=df['magnetics_final_microlevelled'], cmap='jet', s=2, alpha=1.0)
+    sc = plt.scatter(df['longitude'], df['latitude'], c=df['magnetics'], cmap='jet', s=2, alpha=1.0)
     plt.colorbar(sc, label='Magnetic Intensity (nT)')
     plt.title('Magnetic Intensity Map', fontsize=16)
     plt.xlabel('Longitude')
@@ -251,7 +251,7 @@ def plot_results(df, model, k):
     
     # Plot 5: Altitude Contour
     plt.figure(figsize=(12, 10))
-    cntr = plt.tricontourf(df['longitude'], df['latitude'], df['laser_alt'], levels=20, cmap='terrain')
+    cntr = plt.tricontourf(df['longitude'], df['latitude'], df['altitude'], levels=20, cmap='terrain')
     plt.colorbar(cntr, label='Laser Altitude (m)')
     plt.title('Laser Altitude Contour Map', fontsize=16)
     plt.xlabel('Longitude')
@@ -265,7 +265,7 @@ def plot_results(df, model, k):
 # ==========================================
 if __name__ == "__main__":
     # Settings
-    CSV_PATH = "/Users/kanishksugotra/Downloads/magnetic.csv"
+    CSV_PATH = "/to/file/path"
     MAG_WEIGHT = 5.0
     M_CLUSTERS = 12
     Q_LATENT = 3
@@ -277,7 +277,7 @@ if __name__ == "__main__":
         exit()
 
     # Preprocessing
-    features = ['latitude', 'longitude', 'laser_alt', 'magnetics_final_microlevelled']
+    features = ['latitude', 'longitude', 'altitude', 'magnetics']
     data = df[features].values
     
     # Split
